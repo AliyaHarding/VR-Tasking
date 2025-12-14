@@ -1,22 +1,7 @@
 ---
+import DetailsLayout from "../layouts/detailsLayout.astro";
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taak Details</title>
-    <link rel="stylesheet" href="/src/css/taken.css">
-    <link rel="icon" href="/src/img/cropped-Logo-on-purple-1.png" type="x-icon/image">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <script src="/src/scripts/taakPagina.js" defer></script>
-</head>
-<body>
-    <header>
-        <section class="logo"><img src="/src/img/logo.webp" alt="VRcafe logo"></section>
-        <section class="dashTitle"><h1 id="categoryTitle">TAAK DETAILS</h1></section>
-        <section class="backBtn"><a href="index.html"><i class="fa-solid fa-caret-left"></i>TERUG</a></section>
-    </header>
+<DetailsLayout>
     <main>
         <section class="box1" id="taskTitle">[title taak]</section>
         <section class="box2">
@@ -42,5 +27,4 @@
             </section>
         </section>
     </main>
-</body>
-</html>
+</DetailsLayout>

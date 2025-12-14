@@ -1,23 +1,7 @@
 ---
-import '../css/global.css'
+import IndexLayout from '../layouts/indexLayout.astro';
 ---
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do - Home</title>
-    <link rel="icon" href="/src/img/cropped-Logo-on-purple-1.png" type="x-icon/image">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-     <script src="/src/scripts/main.js" defer></script>
-</head>
-<body>
-    <header>
-        <section class="logo"><img src="/src/img/logo.webp" alt="VRcafe logo"></section>
-        <section class="dashTitle"><h1>DASHBOARD</h1></section>
-        <section class="plusBtn"><button><i class="fa-solid fa-plus"></i></button></section>
-    </header>
+<IndexLayout>
     <main>
         <section class="calendarTodo">
             <section class="calendar">
@@ -38,26 +22,23 @@ import '../css/global.css'
                 <article class="taken">
                     <article class="werkSlide">
                         <h2>WERK</h2>
-                        <a href=""></a>
                     </article>
                     <article class="uitSlide">
                         <h2>UITJES</h2>
-                        <a href=""></a>
                     </article>
                     <article class="priveSlide">
                         <h2>PRIVE</h2>
-                        <a href=""></a>
                     </article>
                 </article>
                 <article class="slidesBtn">
                     <button class="prevBtn">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-	                        <path fill="#FD3E81" d="M16.21 16H7.79a1.76 1.76 0 0 1-1.59-1a2.1 2.1 0 0 1 .26-2.21l4.21-5.1a1.76 1.76 0 0 1 2.66 0l4.21 5.1A2.1 2.1 0 0 1 17.8 15a1.76 1.76 0 0 1-1.59 1M8 14h7.9L12 9.18Z" />
+                            <path fill="#FD3E81" d="M16.21 16H7.79a1.76 1.76 0 0 1-1.59-1a2.1 2.1 0 0 1 .26-2.21l4.21-5.1a1.76 1.76 0 0 1 2.66 0l4.21 5.1A2.1 2.1 0 0 1 17.8 15a1.76 1.76 0 0 1-1.59 1M8 14h7.9L12 9.18Z" />
                         </svg>
                     </button>
                     <button class="nextBtn">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-	                        <path fill="#FD3E81" d="M16.21 16H7.79a1.76 1.76 0 0 1-1.59-1a2.1 2.1 0 0 1 .26-2.21l4.21-5.1a1.76 1.76 0 0 1 2.66 0l4.21 5.1A2.1 2.1 0 0 1 17.8 15a1.76 1.76 0 0 1-1.59 1M8 14h7.9L12 9.18Z" />
+                            <path fill="#FD3E81" d="M16.21 16H7.79a1.76 1.76 0 0 1-1.59-1a2.1 2.1 0 0 1 .26-2.21l4.21-5.1a1.76 1.76 0 0 1 2.66 0l4.21 5.1A2.1 2.1 0 0 1 17.8 15a1.76 1.76 0 0 1-1.59 1M8 14h7.9L12 9.18Z" />
                         </svg>
                     </button>
                 </article>
@@ -101,29 +82,4 @@ import '../css/global.css'
             </section>
         </form>
     </section>
-    <footer>
-        <center><section class="triangle-down"></section></center>
-        <section class="takenBoard">
-            <section class="takenTitle">
-                <h1>TAKEN VOLTOOID</h1>
-            </section>
-            <section class="takenVoltooid">
-                <section class="werk">
-                    <h2>WERK</h2>
-                    <section class="werkScroll">
-                    </section>
-                </section>
-                <section class="uitjes">
-                    <h2>UITJES</h2>
-                    <section class="uitjesScroll"></section>
-                </section>
-                <section class="prive">
-                    <h2>PRIVE</h2>
-                    <section class="priveScroll">
-                    </section>
-                </section>
-            </section>
-        </section>
-    </footer>
-</body>
-</html> 
+</IndexLayout>

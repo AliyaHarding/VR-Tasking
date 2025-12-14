@@ -3,18 +3,14 @@
         const urlParams = new URLSearchParams(window.location.search);
         const taskId = urlParams.get('id');
         
-        // Load tasks from localStorage
         const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
         const task = tasks.find(t => t.id === taskId);
         
         if (task) {
-            // Update page title
             document.title = task.title;
             
-            // Update header with category
             document.getElementById('categoryTitle').textContent = task.category;
             
-            // Update task title
             document.getElementById('taskTitle').textContent = task.title;
             
             // Update task description with automatic word wrap
@@ -22,8 +18,8 @@
             if (task.description) {
                 // Break long words and preserve line breaks
                 let formattedDescription = task.description
-                    .replace(/([^\s]{20})/g, '$1 ') // Break words longer than 20 chars
-                    .replace(/\n/g, '<br>'); // Preserve line breaks
+                    .replace(/([^\s]{20})/g, '$1 ') 
+                    .replace(/\n/g, '<br>'); 
                 
                 descriptionElement.innerHTML = formattedDescription;
             } else {

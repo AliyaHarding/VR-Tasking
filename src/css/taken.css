@@ -33,7 +33,7 @@ body::before {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('bg-2.svg');
+    background-image: var(--bgImage);
     background-size: cover;
     background-repeat: repeat;
     opacity: 0.5;   

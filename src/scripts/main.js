@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // 1. Load tasks from storage
     let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
     
-    // 2. Category colors with full configuration
     const categories = {
         'WERK': {
             color: '#2EACFF',
