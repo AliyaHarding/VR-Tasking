@@ -2,15 +2,129 @@
 
 ---
 
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do - Home</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="icon" href="cropped-Logo-on-purple-1.png" type="x-icon/image">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+     <script src="calendar.js" defer></script>
+</head>
+<body>
+    <header>
+        <section class="logo"><img src="logo.webp" alt="VRcafe logo"></section>
+        <section class="dashTitle"><h1>DASHBOARD</h1></section>
+        <section class="plusBtn"><button><i class="fa-solid fa-plus"></i></button></section>
+    </header>
+    <main>
+        <section class="calendarTodo">
+            <section class="calendar">
+                <article class="calboard">
+                    <button id="prevMonth"><i class="fa-solid fa-angle-left"></i></button>
+                    <h2 id="monthYear">
+                        <!-- month year will come here with js -->
+                    </h2>
+                    <button id="nextMonth"><i class="fa-solid fa-angle-right"></i></button>
+                </article>
+                <article class="view">
+                    <article id="calendarDays">
+                        <!-- days will come here with js -->
+                    </article>
+                </article>
+            </section>
+            <section class="todoList">
+                <article class="taken">
+                    <article class="werkSlide">
+                        <h2>WERK</h2>
+                        <a href=""></a>
+                    </article>
+                    <article class="uitSlide">
+                        <h2>UITJES</h2>
+                        <a href=""></a>
+                    </article>
+                    <article class="priveSlide">
+                        <h2>PRIVE</h2>
+                        <a href=""></a>
+                    </article>
+                </article>
+                <article class="slidesBtn">
+                    <button class="prevBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+	                        <path fill="#FD3E81" d="M16.21 16H7.79a1.76 1.76 0 0 1-1.59-1a2.1 2.1 0 0 1 .26-2.21l4.21-5.1a1.76 1.76 0 0 1 2.66 0l4.21 5.1A2.1 2.1 0 0 1 17.8 15a1.76 1.76 0 0 1-1.59 1M8 14h7.9L12 9.18Z" />
+                        </svg>
+                    </button>
+                    <button class="nextBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+	                        <path fill="#FD3E81" d="M16.21 16H7.79a1.76 1.76 0 0 1-1.59-1a2.1 2.1 0 0 1 .26-2.21l4.21-5.1a1.76 1.76 0 0 1 2.66 0l4.21 5.1A2.1 2.1 0 0 1 17.8 15a1.76 1.76 0 0 1-1.59 1M8 14h7.9L12 9.18Z" />
+                        </svg>
+                    </button>
+                </article>
+            </section>
+        </section>
+        <section class="dagView">
+            <h1>TO DO</h1>
+            <section class="category-filter">
+                <button class="filter-btn" data-category="WERK">WERK</button>
+                <button class="filter-btn" data-category="UITJES">UITJES</button>
+                <button class="filter-btn" data-category="PRIVE">PRIVE</button>
+            </section>
+            <section class="taakView"></section>
+        </section>
+    </main>
+    <section class="taakForm">
+        <form action="" method="post">
+            <section class="closeBtn">
+                <button type="button"><i class="fa-solid fa-xmark"></i></button>
+            </section>
+            <section class="titelText">
+                <input type="text" name="taakTitel" id="taakTitel" placeholder="Titel..." required>
+            </section>
+            <section>
+                <textarea name="taakBeschrijving" id="taakBeschrijving" placeholder="Beschrijving..." required></textarea>
+            </section>
+            <section>
+                <h2 class="datumH2">DATUM</h2>
+                <input type="date" name="taakDatum" id="taakDatum" lang="nl" required>
+            </section>
+            <section>
+                <h2 class="categorieH2">CATEGORIE</h2>
+                <section class="catagoryBtns">
+                    <button type="button">WERK</button>
+                    <button type="button">UITJES</button>
+                    <button type="button">PRIVE</button>
+                </section>
+            </section>
+            <section class="formBtns">
+                <button type="submit" class="addBtn">TAAK TOEVOEGEN</button>
+            </section>
+        </form>
+    </section>
+    <footer>
+        <center><section class="triangle-down"></section></center>
+        <section class="takenBoard">
+            <section class="takenTitle">
+                <h1>TAKEN VOLTOOID</h1>
+            </section>
+            <section class="takenVoltooid">
+                <section class="werk">
+                    <h2>WERK</h2>
+                    <section class="werkScroll">
+                    </section>
+                </section>
+                <section class="uitjes">
+                    <h2>UITJES</h2>
+                    <section class="uitjesScroll"></section>
+                </section>
+                <section class="prive">
+                    <h2>PRIVE</h2>
+                    <section class="priveScroll">
+                    </section>
+                </section>
+            </section>
+        </section>
+    </footer>
+</body>
+</html> 
