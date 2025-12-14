@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
     
-    // 3. Get all elements we need
     const monthYear = document.getElementById('monthYear');
     const calendarDays = document.getElementById('calendarDays');
     const prevBtn = document.getElementById('prevMonth');
@@ -31,17 +30,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const categoryBtns = document.querySelectorAll('.catagoryBtns button');
     const taakView = document.querySelector('.taakView');
     
-    // SLIDER elements (todo slides)
     const werkSlide = document.querySelector('.werkSlide');
     const uitSlide = document.querySelector('.uitSlide');
     const priveSlide = document.querySelector('.priveSlide');
     
-    // Completed task sections in footer
     const werkCompleted = document.querySelector('.werkScroll');
     const uitjesCompleted = document.querySelector('.uitjesScroll');
     const priveCompleted = document.querySelector('.priveScroll');
     
-    // overlay for form
     const overlay = document.createElement('div');
     overlay.style.cssText = `
         position: fixed;
@@ -56,11 +52,9 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.body.appendChild(overlay);
     
-    // 5. Calendar variables
     let currentDate = new Date();
     let selectedCategory = '';
     
-    // 6. Initialize everything
     init();
     
     function init() {
@@ -81,7 +75,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         calendarDays.innerHTML = '';
         
-        // Add day names
         const days = ['zo', 'ma', 'di', 'wo', 'do', 'vr', 'za'];
         days.forEach(day => {
             const dayEl = document.createElement('div');
@@ -221,7 +214,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function loadTodoSlides() {
-        // Clear the slides first
         werkSlide.innerHTML = '<h2>WERK</h2>';
         uitSlide.innerHTML = '<h2>UITJES</h2>';
         priveSlide.innerHTML = '<h2>PRIVE</h2>';
