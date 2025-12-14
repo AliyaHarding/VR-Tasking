@@ -644,7 +644,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
     
     .logo img {
-        width: 140px;
+        display: none;
     }
     
     .dashTitle h1 {
@@ -724,6 +724,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         border-left: 200px solid transparent;
         border-right: 200px solid transparent;
         border-top: 60px solid var(--bgColor);
+    }
+
+    .logo img {
+        display: block;
     }
 }
 
