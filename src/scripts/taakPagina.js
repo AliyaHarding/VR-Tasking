@@ -1,5 +1,4 @@
     document.addEventListener('DOMContentLoaded', function() {
-        // Get task ID from URL
         const urlParams = new URLSearchParams(window.location.search);
         const taskId = urlParams.get('id');
         
@@ -7,16 +6,13 @@
         const task = tasks.find(t => t.id === taskId);
         
         if (task) {
-            document.title = task.title;
-            
+           
             document.getElementById('categoryTitle').textContent = task.category;
             
             document.getElementById('taskTitle').textContent = task.title;
             
-            // Update task description with automatic word wrap
             const descriptionElement = document.getElementById('taskDescription');
             if (task.description) {
-                // Break long words and preserve line breaks
                 let formattedDescription = task.description
                     .replace(/([^\s]{20})/g, '$1 ') 
                     .replace(/\n/g, '<br>'); 
@@ -26,12 +22,10 @@
                 descriptionElement.textContent = 'Geen beschrijving toegevoegd.';
             }
             
-            // Update category with color
             const categoryElement = document.getElementById('taskCategory');
             categoryElement.textContent = task.category;
             categoryElement.className = task.category.toLowerCase();
             
-            // Update category color in header
             const headerTitle = document.getElementById('categoryTitle');
             switch(task.category) {
                 case 'WERK':
@@ -51,7 +45,6 @@
                     break;
             }
             
-            // Update date
             const date = new Date(task.date);
             const formattedDate = date.toLocaleDateString('nl-NL', {
                 weekday: 'long',
@@ -81,13 +74,11 @@
                 }
             };
         } else {
-            // Task not found
             document.getElementById('taskTitle').textContent = 'Taak niet gevonden';
             document.getElementById('taskDescription').textContent = 'De opgevraagde taak bestaat niet of is verwijderd.';
             document.querySelector('.statusBtn').style.display = 'none';
         }
         
-        // Add CSS for text wrapping
         const style = document.createElement('style');
         style.textContent = `
             .beschrijving p {
