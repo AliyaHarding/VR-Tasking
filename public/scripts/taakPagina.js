@@ -60,7 +60,7 @@
                     // Remove task from array
                     const updatedTasks = tasks.filter(t => t.id !== taskId);
                     localStorage.setItem('tasks', JSON.stringify(updatedTasks));
-                    window.location.href = 'index.html';
+                    window.location.href = 'index.astro';
                 }
             };
             
@@ -70,7 +70,7 @@
                     task.completed = true;
                     task.completedAt = new Date().toISOString();
                     localStorage.setItem('tasks', JSON.stringify(tasks));
-                    window.location.href = 'index.html';
+                    window.location.href = 'index.astro';
                 }
             };
         } else {
